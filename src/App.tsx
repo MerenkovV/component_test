@@ -22,6 +22,8 @@ function App() {
   return (
     <div className="App">
       <SelectComponent className='large' objArray={objArr}/>
+      <SelectComponent className='medium' objArray={objArr}/>
+      <SelectComponent className='small' objArray={objArr}/>
     </div>
   );
 }

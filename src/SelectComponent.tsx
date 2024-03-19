@@ -33,17 +33,23 @@ function useOutsideClick(callback: () => void) {
 
 const SelectComponent = ({className, objArray}:Props) => {
 
-   const wrapperRef = useOutsideClick(()=>{setOpen(false)});
+  const wrapperRef = useOutsideClick(()=>{setOpen(false)});
 
+  const [objects, setObjects] = useState<ObjType[]>(objArray)
   const [search, setSearch] = useState('')
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
+
+  useEffect(()=>{
+    const foundObj = objArray.filter((obj)=>obj.label.includes(search))
+    setObjects(foundObj)
+  }, [search])
 
   return (
     <div ref={wrapperRef} className={`select ${className}`} onClick={()=>setOpen(true)}>
       <input className={`select__input ${className} ${open ? 'rounded' : ''}`} type="text" value={search} onChange={(e)=>setSearch(e.target.value)}/>
       <div className={`select__items${open === false ? '-closed' : ''} ${className}`}>
-        {objArray.map((obj, index)=>{
-          return <p className='select__item' key={index}>{obj.label}</p>
+        {objects.map((obj, index)=>{
+          return <p className='select__item'  key={index}>{obj.label}</p>
         })}
       </div>
     </div>
