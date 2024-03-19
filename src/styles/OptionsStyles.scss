@@ -1,0 +1,27 @@
+.select.large{
+    height: auto;
+    width: 300px;
+}
+
+.select__items-closed.large{
+    height: 0px;
+    width: 300px;
+}
+
+.select__items.large{
+    height: 200px;
+    width: 300px;
+
+    & > .select__item{
+        font-size: 22px;
+    }
+}
+
+.select__input.large{
+    box-sizing: border-box;
+    height: 30px;
+    width: 300px;
+    padding: 5px;
+    margin: 0;
+    border: 0;
+}

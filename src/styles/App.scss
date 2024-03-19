@@ -1,0 +1,59 @@
+body{
+    background: #1c1c1c;
+    height: 100vh;
+}
+
+#root{
+    height: 100%;
+}
+
+.App{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.select{
+    position: absolute;
+    background: #c9c9c9;
+    top: 100px;
+    margin: 0 auto;
+    border-radius: 6px 6px 6px 6px;
+
+    &:focus{
+        outline: 1px solid #6da0ff;
+    }
+
+    &__input{
+        border-radius: 6px 6px 6px 6px;
+
+        &:focus{
+            outline: none;
+        }
+
+        &.rounded{
+            border-radius: 6px 6px 0 0;
+        }
+    }
+
+    &__items{
+        overflow-y: auto;
+        height: 300px;
+        position: absolute;
+        background: inherit;
+        border-radius: 0 0 6px 6px;
+    }
+
+    &__items-closed{
+        overflow-y: hidden;
+        height: 0px;
+    }
+
+    &__item{
+        background: #e0e0e0;
+        margin: 5px 0px;
+        padding: 2px;
+        word-wrap: break-word;
+    }
+}

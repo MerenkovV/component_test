@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.scss'
+import SelectComponent, { ObjType } from './SelectComponent';
 
 function App() {
+
+  const objArr: ObjType[] = [
+    {label: 'First1111111111111First1111111111111', image: ''},
+    {label: 'Second', image: ''},
+    {label: 'Third', image: ''},
+    {label: 'Fourth ', image: ''},
+    {label: 'Fifth', image: ''},
+    {label: 'Sixth ', image: ''},
+    {label: 'First', image: ''},
+    {label: 'Second', image: ''},
+    {label: 'Third', image: ''},
+    {label: 'Fourth ', image: ''},
+    {label: 'Fifth', image: ''},
+    {label: 'Sixth ', image: ''},
+  ]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SelectComponent className='large' objArray={objArr}/>
     </div>
   );
 }
