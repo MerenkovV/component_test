@@ -1,75 +1,133 @@
-.select{
 
-    &.large{
-        height: auto;
-        width: 300px;
-    }
+.large.select{
 
-    &.medium{
-        height: auto;
-        width: 280px;
-    }
+    height: auto;
+    width: 300px;
 
-    &.small{
-        height: auto;
-        width: 250px;
+    &::after{
+        bottom: 5px;
     }
 
     &__input{
 
-        box-sizing: border-box;
-        margin: 0;
-        border: 0;
-        padding: 5px;
-
-        &.large{
-            height: 30px;
-            width: 300px;
-            font-size: 20px;
-        }
-
-        &.medium{
-            height: 25px;
-            width: 280px;
-            font-size: 18px;
-        }
-
-        &.small{
-            height: 22px;
-            width: 250px;
-            font-size: 16px;
-        }
+        height: 30px;
+        width: 300px;
+        font-size: 20px;  
 
     }
 
     &__items{
 
-        &.large{
-            height: 200px;
-            width: 300px;
-        
-            & > .select__item{
-                font-size: 22px;
-            }
+        max-height: 200px;
+        width: 300px;
+    
+        & > .select__item{
+            font-size: 22px;
+        }
+    }
+
+    &__icon{
+        width: 30px;
+        right: 0px;
+    }
+
+    &__target{
+        font-size: 16px;
+
+        &::after{
+            width: 16px;
+            height: 2px;
         }
 
-        &.medium{
-            height: 180px;
-            width: 280px;
-        
-            & > .select__item{
-                font-size: 20px;
-            }
-        }
-
-        &.small{
-            height: 180px;
-            width: 250px;
-        
-            & > .select__item{
-                font-size: 18px;
-            }
+        &::before{
+            width: 16px;
+            height: 2px;
         }
     }
 }
 
+.medium.select{
+
+    height: auto;
+    width: 280px;
+
+    &::after{
+        bottom: 4px;
+    }
+
+    &__input{
+        height: 25px;
+        width: 280px;
+        font-size: 18px;
+    }
+
+    &__items{
+        max-height: 180px;
+        width: 280px;
+        & > .select__item{
+            font-size: 20px;
+        }
+    }
+
+    &__icon{
+        width: 28px;
+        right: -1px;
+    }
+
+    &__target{
+        font-size: 14px;
+
+        &::after{
+            width: 12px;
+            height: 2px;
+        }
+
+        &::before{
+            width: 12px;
+            height: 2px;
+        }
+    }
+}
+
+.small.select{
+
+    height: auto;
+    width: 250px;
+
+    &::after{
+        bottom: 3px;
+    }
+
+    &__input{
+        height: 22px;
+        width: 250px;
+        font-size: 16px;
+    }
+
+    &__items{
+        max-height: 180px;
+        width: 250px;
+        & > .select__item{
+            font-size: 18px;
+        }
+    }
+
+    &__icon{
+        width: 25px;
+        right: -2px;
+    }
+
+    &__target{
+        font-size: 12px;
+
+        &::after{
+            width: 10px;
+            height: 2px;
+        }
+
+        &::before{
+            width: 10px;
+            height: 2px;
+        }
+    }
+}

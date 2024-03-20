@@ -16,10 +16,22 @@ body{
 
 .select{
     position: relative;
-    background: #c9c9c9;
+    background: #ffffff;
     top: 100px;
     margin: 5px auto;
     border-radius: 6px 6px 6px 6px;
+    cursor: pointer;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 90%;
+        height: 1px;
+        background: #000;
+        bottom: 5px;
+        left: 5px;
+        display: block;
+    }
 
     &:focus{
         outline: 1px solid #6da0ff;
@@ -27,6 +39,11 @@ body{
 
     &__input{
         border-radius: 6px 6px 6px 6px;
+        box-sizing: border-box;
+        position: relative;
+        margin: 0;
+        border: 0;
+        padding: 5px;
 
         &:focus{
             outline: none;
@@ -35,26 +52,101 @@ body{
         &.rounded{
             border-radius: 6px 6px 0 0;
         }
+
+    }
+
+    &__icon{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &.inverted > path{
+            transform-origin: 50% 50%;
+            transform: rotate(180deg);
+        }
     }
 
     &__items{
         overflow-y: auto;
-        height: 300px;
         position: absolute;
+        min-height: 10px;
         z-index: 99;
         background: inherit;
         border-radius: 0 0 6px 6px;
-    }
 
-    &__items-closed{
-        overflow-y: hidden;
-        height: 0px;
+        &_closed{
+            overflow-y: hidden;
+            height: 0px;
+        }
     }
 
     &__item{
-        background: #e0e0e0;
-        margin: 5px 0px;
-        padding: 2px;
+        background: #BEBEBE;
+        margin: 0;
+        padding: 5px 2px;
         word-wrap: break-word;
+        transition-duration: 100ms;
+
+        &.target{
+            background: linear-gradient(86deg, rgba(161,175,204,1) 0%, rgba(130,138,154,1) 100%);
+        }
+
+        &:hover{
+            background: linear-gradient(86deg, rgba(161,175,204,1) 0%, rgba(130,138,154,1) 100%);
+            cursor: pointer;
+        }
+    }
+
+    &__target{
+        padding: 2px 25px 2px 4px;
+        border-radius: 10px;
+        background: #2e2e2e;
+        color: #fff;
+        text-align: center;
+        word-wrap: break-word;
+        max-width: 100%;
+        box-sizing: border-box;
+        transition-duration: 150ms;
+        position: relative;
+
+        &::after{
+            content: "";
+            background: #fff;
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: rotate(45deg) translateY(-50%);
+            transition-duration: 150ms;
+            right: 6px;
+        }
+
+        &::before{
+            content: "";
+            background: #fff;
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: rotate(-45deg) translateY(-50%);
+            transition-duration: 150ms;
+            right: 5px;
+        }
+
+        &:hover{
+            background: #5c5c5c;
+            cursor: pointer;
+
+            &::before, &::after{
+                background: #ff1818;
+            }
+        }
+    }
+
+    &__target-wrapper{
+        position: relative;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px;
+        padding: 2px 22px 0px 2px ;
     }
 }
