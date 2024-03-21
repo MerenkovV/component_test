@@ -1,8 +1,9 @@
+
 # Description of the project
 
-In this project, a React component was created called `<SelectComponent>`, which performs <select> functions from HTML
+In this project, a React component was created called `<SelectComponent>`, which performs `<select>` functions from HTML
 
-## Props
+<h2 center>Props</h2>
 
 The component accepts the following props:
 
