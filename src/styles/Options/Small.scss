@@ -1,0 +1,62 @@
+.small.select{
+
+    height: auto;
+    width: 250px;
+
+    &::after{
+        bottom: 3px;
+    }
+
+    &__input{
+        height: 22px;
+        width: 250px;
+        font-size: 16px;
+    }
+
+    &__items{
+        max-height: 180px;
+        width: 250px;
+        & > .select__item{
+            font-size: 18px;
+        }
+    }
+
+    &__icon{
+        width: 25px;
+        right: -2px;
+    }
+
+    &__target{
+        font-size: 12px;
+
+        &::after{
+            width: 10px;
+            height: 2px;
+        }
+
+        &::before{
+            width: 10px;
+            height: 2px;
+        }
+    }
+
+    &__cancel{
+        right: 18px;
+        bottom: 3px;
+        width: 15px;
+        height: 15px;
+        padding: 1px;
+
+        &::after{
+            right: 3px;
+            height: 2px;
+            width: 12px;
+        }
+
+        &::before{
+            right: 2px;
+            height: 2px;
+            width: 12px;
+        }
+    }
+}

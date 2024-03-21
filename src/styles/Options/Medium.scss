@@ -1,0 +1,62 @@
+.medium.select{
+
+    height: auto;
+    width: 280px;
+
+    &::after{
+        bottom: 4px;
+    }
+
+    &__input{
+        height: 25px;
+        width: 280px;
+        font-size: 18px;
+    }
+
+    &__items{
+        max-height: 180px;
+        width: 280px;
+        & > .select__item{
+            font-size: 20px;
+        }
+    }
+
+    &__icon{
+        width: 28px;
+        right: -1px;
+    }
+
+    &__target{
+        font-size: 14px;
+
+        &::after{
+            width: 12px;
+            height: 2px;
+        }
+
+        &::before{
+            width: 12px;
+            height: 2px;
+        }
+    }
+
+    &__cancel{
+        right: 22px;
+        bottom: 4px;
+        width: 15px;
+        height: 15px;
+        padding: 2px;
+
+        &::after{
+            right: 3.5px;
+            height: 2px;
+            width: 13px;
+        }
+
+        &::before{
+            right: 2.5px;
+            height: 2px;
+            width: 13px;
+        }
+    }
+}

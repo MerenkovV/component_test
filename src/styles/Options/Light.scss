@@ -1,0 +1,57 @@
+.light.select{
+    background: #ffffff;
+
+    &::after{
+        background: #000;
+    }
+
+    &__items{
+        scrollbar-color: #545454 #BEBEBE;
+    }
+
+    &__item{
+        background: #BEBEBE;
+
+        &.target{
+            background: linear-gradient(86deg, rgba(161,175,204,1) 0%, rgba(130,138,154,1) 100%);
+        }
+
+        &:hover{
+            background: linear-gradient(86deg, rgba(161,175,204,1) 0%, rgba(130,138,154,1) 100%);
+        }
+    }
+
+    &__target{
+        background: #2e2e2e;
+        color: #fff;
+
+        &::after{
+            background: #fff;
+        }
+
+        &::before{
+            background: #fff;
+        }
+
+        &:hover{
+            background: #5c5c5c;
+
+            &::before, &::after{
+                background: #ff1818;
+            }
+        }
+    }
+
+    &__cancel{
+        &::after{
+            background: #000;
+        }
+
+        &::before{
+            background: #000;
+        }
+        &:hover{
+            background: rgba(0, 0, 0, 0.226);
+        }
+    }
+}

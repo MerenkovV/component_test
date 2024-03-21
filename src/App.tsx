@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/App.scss'
-import SelectComponent, { ObjType } from './SelectComponent';
+import { ObjType } from './types/types';
+import SelectComponent from './SelectComponent';
 
 function App() {
 
@@ -21,9 +22,9 @@ function App() {
 
   return (
     <div className="App">
-      <SelectComponent className='large' objArray={objArr}/>
-      <SelectComponent className='medium' objArray={objArr}/>
-      <SelectComponent className='small' objArray={objArr}/>
+      <SelectComponent className='large light' objArray={objArr}/>
+      <SelectComponent className='medium dark' objArray={objArr}/>
+      <SelectComponent className='small color' objArray={objArr}/>
     </div>
   );
 }

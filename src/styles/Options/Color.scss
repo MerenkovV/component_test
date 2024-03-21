@@ -1,0 +1,67 @@
+.color.select{
+    background: #2c64ff;
+
+    &::after{
+        background: #e2e2e2;
+    }
+
+    &__input{
+        background: #2c64ff;
+        color: #fff;
+    }
+
+    &__items{
+        scrollbar-color: #c7c7c7 #2c64ff;
+    }
+
+    &__item{
+        background: #2c64ff;
+        color: #fff;
+
+        &.target{
+            background: linear-gradient(86deg, #2538cc 0%, #1c4fda 100%);
+        }
+
+        &:hover{
+            background: linear-gradient(86deg, #2538cc 0%, #1c4fda 100%);
+        }
+    }
+
+    &__target{
+        background: #0026bc;
+        color: #fff;
+
+        &::after{
+            background: #fff;
+        }
+
+        &::before{
+            background: #fff;
+        }
+
+        &:hover{
+            background: #1b57c7;
+
+            &::before, &::after{
+                background: #ff1818;
+            }
+        }
+    }
+
+    &__icon {
+        color: #fff;
+    }
+
+    &__cancel{
+        &::after{
+            background: #fff;
+        }
+
+        &::before{
+            background: #fff;
+        }
+        &:hover{
+            background: rgba(176, 173, 255, 0.226);
+        }
+    }
+}
