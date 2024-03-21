@@ -1,4 +1,4 @@
-.light.select{
+.light .select{
     background: #ffffff;
 
     &::after{
@@ -6,11 +6,11 @@
     }
 
     &__items{
-        scrollbar-color: #545454 #BEBEBE;
+        scrollbar-color: #545454 #ffffff;
     }
 
     &__item{
-        background: #BEBEBE;
+        background: #ffffff;
 
         &.target{
             background: linear-gradient(86deg, rgba(161,175,204,1) 0%, rgba(130,138,154,1) 100%);

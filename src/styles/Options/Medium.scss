@@ -1,4 +1,4 @@
-.medium.select{
+.medium .select{
 
     height: auto;
     width: 280px;
@@ -57,6 +57,17 @@
             right: 2.5px;
             height: 2px;
             width: 13px;
+        }
+    }
+
+    &__image{
+        max-width: 23px;
+        max-height: 23px;
+    }
+
+    &__item{
+        &.imaged{
+            padding-left: 28px;
         }
     }
 }

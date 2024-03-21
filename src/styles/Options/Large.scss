@@ -1,4 +1,4 @@
-.large.select{
+.large .select{
 
     height: auto;
     width: 300px;
@@ -61,6 +61,17 @@
             right: 2px;
             height: 2px;
             width: 14px;
+        }
+    }
+
+    &__image{
+        max-width: 25px;
+        max-height: 25px;
+    }
+
+    &__item{
+        &.imaged{
+            padding-left: 30px;
         }
     }
 }
