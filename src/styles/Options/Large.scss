@@ -1,77 +1,78 @@
-.large .select{
+.large .select {
+  height: auto;
+  width: 330px;
+  padding: 8px 8px 0px 24px;
 
-    height: auto;
-    width: 300px;
+  &::after {
+    left: 24px;
+    width: 310px;
+    bottom: 5px;
+  }
 
-    &::after{
-        bottom: 5px;
+  &__input {
+    height: 30px;
+    width: 330px;
+    font-size: 20px;
+    left: 0;
+  }
+
+  &__items {
+    max-height: 200px;
+    width: 362px;
+
+    & > .select__item {
+      font-size: 22px;
+    }
+  }
+
+  &__icon {
+    width: 30px;
+    right: 0px;
+  }
+
+  &__target {
+    font-size: 16px;
+
+    &::after {
+      width: 16px;
+      height: 2px;
     }
 
-    &__input{
+    &::before {
+      width: 16px;
+      height: 2px;
+    }
+  }
 
-        height: 30px;
-        width: 300px;
-        font-size: 20px;  
+  &__cancel {
+    right: 27px;
+    bottom: 5px;
+    width: 15px;
+    height: 15px;
+    padding: 2px;
 
+    &::after {
+      right: 3px;
+      height: 2px;
+      width: 14px;
     }
 
-    &__items{
-
-        max-height: 200px;
-        width: 300px;
-    
-        & > .select__item{
-            font-size: 22px;
-        }
+    &::before {
+      right: 2px;
+      height: 2px;
+      width: 14px;
     }
+  }
 
-    &__icon{
-        width: 30px;
-        right: 0px;
+  &__image {
+    max-width: 20px;
+    max-height: 20px;
+  }
+
+  &__item {
+    padding: 5px 30px;
+    &.imaged {
+      padding-left: 30px;
     }
-
-    &__target{
-        font-size: 16px;
-
-        &::after{
-            width: 16px;
-            height: 2px;
-        }
-
-        &::before{
-            width: 16px;
-            height: 2px;
-        }
-    }
-
-    &__cancel{
-        right: 27px;
-        bottom: 5px;
-        width: 15px;
-        height: 15px;
-        padding: 2px;
-
-        &::after{
-            right: 3px;
-            height: 2px;
-            width: 14px;
-        }
-
-        &::before{
-            right: 2px;
-            height: 2px;
-            width: 14px;
-        }
-    }
-
-    &__image{
-        max-width: 25px;
-        max-height: 25px;
-    }
-
-    &__item{
-        &.imaged{
-            padding-left: 30px;
-        }
-    }
+  }
 }

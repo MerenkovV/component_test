@@ -1,67 +1,83 @@
-.dark .select{
+:root {
+  --main-select-dark: #2c2c2c;
+  --border-select-dark: #000000;
+}
+
+.dark .select {
+  background: #2c2c2c;
+  border-color: var(--border-select-dark);
+
+  &::after {
+    background: #e2e2e2;
+  }
+
+  &__input {
     background: #2c2c2c;
+    color: #fff;
+  }
 
-    &::after{
-        background: #e2e2e2;
+  &__items {
+    scrollbar-color: #a6a6a6 #2b2b2b;
+    border-color: var(--border-select-dark);
+  }
+
+  &__item {
+    background: #2b2b2b;
+    color: #fff;
+
+    &.target {
+      background: linear-gradient(
+        86deg,
+        rgb(68, 74, 87) 0%,
+        rgb(71, 75, 84) 100%
+      );
     }
 
-    &__input{
-        background: #2c2c2c;
-        color: #fff;
+    &:hover {
+      background: linear-gradient(
+        86deg,
+        rgb(68, 74, 87) 0%,
+        rgb(71, 75, 84) 100%
+      );
+    }
+  }
+
+  &__target {
+    background: #e1e1e1;
+    color: #000000;
+
+    &::after {
+      background: #000000;
     }
 
-    &__items{
-        scrollbar-color: #a6a6a6 #2b2b2b;
+    &::before {
+      background: #000000;
     }
 
-    &__item{
-        background: #2b2b2b;
-        color: #fff;
+    &:hover {
+      background: #a1a1a1;
 
-        &.target{
-            background: linear-gradient(86deg, rgb(68, 74, 87) 0%, rgb(71, 75, 84) 100%);
-        }
+      &::before,
+      &::after {
+        background: #ff1818;
+      }
+    }
+  }
 
-        &:hover{
-            background: linear-gradient(86deg, rgb(68, 74, 87) 0%, rgb(71, 75, 84) 100%);
-        }
+  &__icon {
+    color: #fff;
+  }
+
+  &__cancel {
+    &::after {
+      background: #fff;
     }
 
-    &__target{
-        background: #e1e1e1;
-        color: #000000;
-
-        &::after{
-            background: #000000;
-        }
-
-        &::before{
-            background: #000000;
-        }
-
-        &:hover{
-            background: #a1a1a1;
-
-            &::before, &::after{
-                background: #ff1818;
-            }
-        }
+    &::before {
+      background: #fff;
     }
-
-    &__icon {
-        color: #fff;
+    &:hover {
+      background: rgba(157, 157, 157, 0.226);
     }
-
-    &__cancel{
-        &::after{
-            background: #fff;
-        }
-
-        &::before{
-            background: #fff;
-        }
-        &:hover{
-            background: rgba(157, 157, 157, 0.226);
-        }
-    }
+  }
 }

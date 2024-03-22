@@ -1,73 +1,76 @@
-.small .select{
+.small .select {
+  height: auto;
+  width: 280px;
+  padding: 8px 8px 0px 26px;
 
-    height: auto;
+  &::after {
+    left: 27px;
+    width: 267px;
+    bottom: 3px;
+  }
+
+  &__input {
+    height: 22px;
     width: 250px;
+    font-size: 16px;
+  }
 
-    &::after{
-        bottom: 3px;
+  &__items {
+    max-height: 180px;
+    width: 314px;
+    & > .select__item {
+      font-size: 18px;
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    right: -2px;
+  }
+
+  &__target {
+    font-size: 12px;
+
+    &::after {
+      width: 10px;
+      height: 2px;
     }
 
-    &__input{
-        height: 22px;
-        width: 250px;
-        font-size: 16px;
+    &::before {
+      width: 10px;
+      height: 2px;
+    }
+  }
+
+  &__cancel {
+    right: 18px;
+    bottom: 3px;
+    width: 15px;
+    height: 15px;
+    padding: 1px;
+
+    &::after {
+      right: 3px;
+      height: 2px;
+      width: 12px;
     }
 
-    &__items{
-        max-height: 180px;
-        width: 250px;
-        & > .select__item{
-            font-size: 18px;
-        }
+    &::before {
+      right: 2px;
+      height: 2px;
+      width: 12px;
     }
+  }
 
-    &__icon{
-        width: 25px;
-        right: -2px;
+  &__image {
+    max-width: 20px;
+    max-height: 20px;
+  }
+
+  &__item {
+    padding: 5px 30px;
+    &.imaged {
+      padding-left: 30px;
     }
-
-    &__target{
-        font-size: 12px;
-
-        &::after{
-            width: 10px;
-            height: 2px;
-        }
-
-        &::before{
-            width: 10px;
-            height: 2px;
-        }
-    }
-
-    &__cancel{
-        right: 18px;
-        bottom: 3px;
-        width: 15px;
-        height: 15px;
-        padding: 1px;
-
-        &::after{
-            right: 3px;
-            height: 2px;
-            width: 12px;
-        }
-
-        &::before{
-            right: 2px;
-            height: 2px;
-            width: 12px;
-        }
-    }
-
-    &__image{
-        max-width: 20px;
-        max-height: 20px;
-    }
-
-    &__item{
-        &.imaged{
-            padding-left: 25px;
-        }
-    }
+  }
 }
