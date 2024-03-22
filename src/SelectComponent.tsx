@@ -12,7 +12,7 @@ import {
 type SizeType = "small" | "medium" | "large";
 type ColorType = "dark" | "light" | "color";
 
-export interface Props {
+interface Props {
   size?: SizeType;
   color?: ColorType;
   objArray: Array<ObjType>;
